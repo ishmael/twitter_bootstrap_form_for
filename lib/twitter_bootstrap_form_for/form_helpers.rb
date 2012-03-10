@@ -3,7 +3,7 @@ require 'twitter_bootstrap_form_for'
 module TwitterBootstrapFormFor::FormHelpers
   
   def twitter_bootstrap_form_for(*args, &block)
-    options = args.extract_options!.reverse_merge(:builder => TwitterBootstrapFormFor::FormBuilder,:html => {:class => "horizontal-form"})
+    options = args.extract_options!.reverse_merge(:builder => TwitterBootstrapFormFor::FormBuilder,:html => {:class => "form-horizontal"})
      _override_field_error_proc do
        form_for(*(args << options), &block) << after_nested_form_callbacks
      end
