@@ -52,7 +52,9 @@ class TwitterBootstrapFormFor::FormBuilder < ActionView::Helpers::FormBuilder
   # Wraps action buttons into their own styled container.
   #
   def legend(title)
-    template.content_tag("h2",title,:class => 'form-title')
+    template.content_tag(:div,:class => 'listting-title') do
+      template.content_tag("h1",title,:class => 'form-title')
+    end
   end
   #
   # Wraps action buttons into their own styled container.
